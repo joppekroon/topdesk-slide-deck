@@ -1,7 +1,7 @@
 {
-  "name": "presentation",
+  "name": "topdesk-slide-deck",
   "version": "1.0.0",
-  "description": "",
+  "description": "Slide deck framework adapted from deck.js, with a TOPdesk brand visual sauce.",
   "main": "index.html",
   "scripts": {
     "start": "serve",
@@ -11,8 +11,8 @@
     "type": "git",
     "url": "git+https://github.com/codesandbox-app/static-template.git"
   },
-  "keywords": [],
-  "author": "Ives van Hoorne",
+  "keywords": ["slide", "topdesk"],
+  "author": "Joppe Kroon",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/codesandbox-app/static-template/issues"
