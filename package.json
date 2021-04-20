@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
+    "url": "git+https://github.com/joppekroon/topdesk-slide-deck.git"
   },
   "keywords": ["slide", "topdesk"],
   "author": "Joppe Kroon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codesandbox-app/static-template/issues"
+    "url": "https://github.com/joppekroon/topdesk-slide-deck/issues"
   },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme",
+  "homepage": "https://github.com/joppekroon/topdesk-slide-deck#readme",
   "devDependencies": {
     "serve": "^11.2.0"
   }
