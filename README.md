@@ -10,7 +10,7 @@ All the web colors are available as CSS variables, as well as some of the named 
 ### Robin
 
 You can add the TOPdesk Robin to a piece of text by adding a span with the `robin` class.
-Remember to add the attributes `role="img"` and `title="topdesk logomark"` (or something else appropriate) so it represents itself as a topdesk logomark image for assistive technology users, and mouse users can get a tooltip if they do not know what the robin represenets.
+Remember to add the attributes `role="img"` and `title="topdesk logomark"` (or something else appropriate) so it represents itself as a topdesk logomark image for assistive technology users, and mouse users can get a tooltip if they do not know what the robin represents.
 
 ### Rounded shapes
 
