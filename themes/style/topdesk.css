@@ -212,10 +212,14 @@ a:active {
  * - shape-br to position the shape(s) in the bottom right corner
  * - shape-bl to position the shape(s) in the bottom left corner
  */
-.deck-container:not(.deck-menu) .slide.deck-current.shape-large ~ .large-shape,
-.deck-container:not(.deck-menu) .slide.deck-current.shape-small ~ .small-shape,
 .deck-container:not(.deck-menu)
-  .slide.deck-current.shape-small.shape-large
+  .slide:where(.deck-current, .deck-child-current).shape-large
+  ~ .large-shape,
+.deck-container:not(.deck-menu)
+  .slide:where(.deck-current, .deck-child-current).shape-small
+  ~ .small-shape,
+.deck-container:not(.deck-menu)
+  .slide:where(.deck-current, .deck-child-current).shape-small.shape-large
   ~ .large-shape::after {
   display: block;
 }
@@ -258,7 +262,8 @@ a:active {
   left: var(--shape-left, auto);
 }
 .large-shape,
-.slide.deck-current.shape-small:not(.shape-large) ~ .small-shape {
+.slide:where(.deck-current, .deck-child-current).shape-small:not(.shape-large)
+  ~ .small-shape {
   /* round the corner oppposite of the slide edge */
   border-top-left-radius: calc(
     var(--shape-top, 1) * var(--shape-left, 1) * var(--shape-size)
@@ -274,7 +279,8 @@ a:active {
   );
 }
 .large-shape::after,
-.slide.deck-current.shape-small.shape-large ~ .small-shape {
+.slide:where(.deck-current, .deck-child-current).shape-small.shape-large
+  ~ .small-shape {
   /* shift the small shape a little */
   margin-left: calc(var(--shape-right, 1) * var(--shape-size) * 0.2);
   margin-right: calc(var(--shape-left, 1) * var(--shape-size) * 0.2);
@@ -293,38 +299,38 @@ a:active {
     var(--shape-bottom, 1) * var(--shape-right, 1) * var(--shape-size)
   );
 }
-.slide.deck-current.shape-green ~ .small-shape,
-.slide.deck-current.shape-green ~ .large-shape {
+.slide:where(.deck-current, .deck-child-current).shape-green ~ .small-shape,
+.slide:where(.deck-current, .deck-child-current).shape-green ~ .large-shape {
   --shape-color: var(--fern);
   --shape-intersection-color: var(--pine);
 }
 
-.slide.deck-current.shape-red ~ .small-shape,
-.slide.deck-current.shape-red ~ .large-shape {
+.slide:where(.deck-current, .deck-child-current).shape-red ~ .small-shape,
+.slide:where(.deck-current, .deck-child-current).shape-red ~ .large-shape {
   --shape-color: var(--coral);
   --shape-intersection-color: var(--vermillion);
 }
 
-.slide.deck-current.shape-orange ~ .small-shape,
-.slide.deck-current.shape-orange ~ .large-shape {
+.slide:where(.deck-current, .deck-child-current).shape-orange ~ .small-shape,
+.slide:where(.deck-current, .deck-child-current).shape-orange ~ .large-shape {
   --shape-color: var(--cantaloupe);
   --shape-intersection-color: var(--pumpkin);
 }
 
-.slide.deck-current.shape-tl ~ .small-shape,
-.slide.deck-current.shape-tl ~ .large-shape {
+.slide:where(.deck-current, .deck-child-current).shape-tl ~ .small-shape,
+.slide:where(.deck-current, .deck-child-current).shape-tl ~ .large-shape {
   --shape-top: 0;
   --shape-left: 0;
   --shape-right: initial;
 }
-.slide.deck-current.shape-br ~ .small-shape,
-.slide.deck-current.shape-br ~ .large-shape {
+.slide:where(.deck-current, .deck-child-current).shape-br ~ .small-shape,
+.slide:where(.deck-current, .deck-child-current).shape-br ~ .large-shape {
   --shape-bottom: 0;
   --shape-right: 0;
   --shape-top: initial;
 }
-.slide.deck-current.shape-bl ~ .small-shape,
-.slide.deck-current.shape-bl ~ .large-shape {
+.slide:where(.deck-current, .deck-child-current).shape-bl ~ .small-shape,
+.slide:where(.deck-current, .deck-child-current).shape-bl ~ .large-shape {
   --shape-bottom: 0;
   --shape-left: 0;
   --shape-top: initial;
